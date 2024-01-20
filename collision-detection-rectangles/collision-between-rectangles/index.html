@@ -1,0 +1,30 @@
+<script>
+    var rect1 = {x: 5, y: 5, width: 50, height: 50};
+
+    // if the point of the first rect is less than the point of the second (less means to the left.)
+    if (rect1.x < rect2.x + rect2.width &&
+        // if the point on the right of rect 1 is to the right of the point (left point) on rect 2
+        rect1.x + rect1.width > rect2.x &&
+        // if the point of the top of rect 1 is above the point at the bottom of rect 2
+        rect1.y < rect2.y + rect2.height &&
+        // if the point at the bottom of rect 1 is below the point at the top of rect 2
+        rect1.y + rect1.height > rect2.y
+    ){
+        // collision detected
+    }
+    else {
+        // no collision
+    }
+    
+    // better logic 
+    if (rect1.x > rect2.x + rect2.width ||
+        rect1.x + rect1.width < rect2.x ||
+        rect1.y > rect2.y + rect2.height ||
+        rect1.y + rect1.height < rect2.y
+    ){
+        // no collision
+    }
+    else {
+        // collision detected
+    }
+</script>
